@@ -907,7 +907,7 @@ span {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 150px;
-  padding: 107px 300px 59px 300px;
+  padding: 107px 505px 59px 505px;
 }
 @media screen and (max-width: 1360px) {
   .conteiner-2_steps {
@@ -938,7 +938,7 @@ span {
 .conteiner-2_steps-image {
   position: absolute;
   top: 20px;
-  left: 300px;
+  left: 505px;
 }
 @media screen and (max-width: 768px) {
   .conteiner-2_steps-image {
