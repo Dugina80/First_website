@@ -334,6 +334,7 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  overflow: hidden;
   height: 100vh;
   max-width: 100%;
 }
@@ -504,6 +505,7 @@ p {
           align-items: center;
   gap: 577px;
   background-color: #5373fd;
+  overflow: hidden;
 }
 @media screen and (max-width: 1360px) {
   .nav-block {
@@ -517,15 +519,16 @@ p {
 }
 @media screen and (max-width: 768px) {
   .nav-block {
-    display: block;
-    text-align: center;
-  }
-}
-@media screen and (max-width: 768px) {
-  .nav-block {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    text-align: center;
+    gap: 80px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .nav-block {
+    gap: 300px;
   }
 }
 .nav-block_title {
@@ -552,21 +555,19 @@ p {
 }
 @media screen and (max-width: 1360px) and (max-width: 768px) {
   .nav-block_title {
-    padding: 32px 0 0 0;
+    padding: 0;
     text-align: center;
   }
 }
 @media screen and (max-width: 576px) {
   .nav-block_title {
     text-align: center;
-    padding: 32px 0;
   }
 }
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
   padding: 0px;
   gap: 40px;
 }
@@ -597,6 +598,7 @@ p {
 
 .burger {
   display: none;
+  position: relative;
   z-index: 50;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -610,18 +612,28 @@ p {
 
 .burger span {
   height: 2px;
-  width: 50%;
+  width: 100%;
   -webkit-transform: scale(1);
           transform: scale(1);
   background-color: #ffffff;
 }
 
-.burger::before,
+.burger::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: #ffffff;
+  -webkit-transform: all 0.3s ease 0s;
+          transform: all 0.3s ease 0s;
+}
+
 .burger::after {
   content: "";
   position: absolute;
   height: 2px;
   width: 100%;
+  background-color: #ffffff;
   -webkit-transform: all 0.3s ease 0s;
           transform: all 0.3s ease 0s;
 }
@@ -664,16 +676,16 @@ p {
         -ms-flex-direction: column;
             flex-direction: column;
     position: absolute;
-    width: 50%;
-    height: 30%;
-    top: 650px;
+    width: 40%;
+    height: 25%;
+    top: 750px;
     bottom: 0;
-    left: 250px;
+    left: 300px;
     right: 0;
     z-index: 50;
     overflow-y: auto;
     padding: 20px 5px;
-    background-color: #5373FD;
+    background-color: #5373fd;
     -webkit-animation: burgerAnimation 0.4s;
             animation: burgerAnimation 0.4s;
   }
@@ -736,6 +748,7 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  overflow: hidden;
   -o-object-fit: cover;
      object-fit: cover;
   max-width: 100%;
@@ -751,7 +764,7 @@ p {
 }
 @media screen and (max-width: 1360px) {
   .conteiner-1_block {
-    padding: 124px 110px;
+    padding: 124px 155px;
     gap: 122px;
   }
 }
@@ -814,7 +827,7 @@ p {
   height: 60px;
 }
 
-span {
+.conteiner-1_block-span {
   font-family: "Aleo", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -887,6 +900,7 @@ span {
   background: #333333;
   background-size: cover;
   background-position: center;
+  overflow: hidden;
   height: 100%;
   max-width: 100%;
   position: relative;
@@ -931,7 +945,7 @@ span {
     height: -moz-fit-content;
     height: fit-content;
     gap: 30px;
-    padding: 60px 250px 104px;
+    padding: 60px 300px 104px;
   }
 }
 
@@ -943,6 +957,16 @@ span {
 @media screen and (max-width: 768px) {
   .conteiner-2_steps-image {
     display: none;
+  }
+}
+@media screen and (max-width: 1360px) {
+  .conteiner-2_steps-image {
+    left: 220px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .conteiner-2_steps-image {
+    left: 60px;
   }
 }
 
@@ -966,6 +990,7 @@ span {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  overflow: hidden;
   height: 684px;
   max-width: 100%;
 }
@@ -1017,7 +1042,7 @@ span {
 }
 @media screen and (max-width: 768px) {
   .conteiner-3_block {
-    margin: 120px 24px;
+    margin: 120px 50px;
     height: 348px;
   }
 }
@@ -1033,6 +1058,7 @@ span {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  overflow: hidden;
   height: 684px;
   max-width: 100%;
 }
@@ -1058,7 +1084,7 @@ span {
 }
 @media screen and (max-width: 768px) {
   .conteiner-4_block {
-    margin: 120px 24px;
+    margin: 120px 50px;
   }
 }
 @media screen and (max-width: 576px) {
@@ -1073,6 +1099,7 @@ span {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  overflow: hidden;
   height: 100%;
   max-width: 100%;
   position: relative;
